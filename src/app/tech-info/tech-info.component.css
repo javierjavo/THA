@@ -1,0 +1,211 @@
+.main{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    overflow: scroll;
+    float: left;
+    z-index: 5;
+}
+
+.btn-move{
+    position: absolute;
+    z-index: 10;
+    padding-top: 15vh;
+    height: 25vh;
+    font-size: 10vh;
+    vertical-align: middle;
+    background-image:  linear-gradient(to right, #00000000, #00000000);
+}
+.btn-move:hover{
+    cursor: pointer;
+}
+#align-left{
+    position: absolute;
+    float: left;
+    left: -3vh;
+    animation-name: n-shadow-l;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#align-left:hover{
+    animation-name: shadow-l;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#align-right{
+    position: absolute;
+    float: right;
+    right: 0px;
+    animation-name: n-shadow-r;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#align-right:hover{
+    animation-name: shadow-r;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+:host carousel-component{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 1vh;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0vh;
+    left: -1.5vh;
+  }
+  
+  .button-toggle{
+    font-size: 1.8vh;
+    padding: 1vh;
+    margin-bottom: 1vh;
+  }
+  h2{
+      position: relative;
+      font-size: 3vh;
+      top:-1vh;
+  }
+  h3{
+    position: relative;
+    top:-4vh;
+    font-size: 3vh;
+    font-weight: lighter;
+    color: #1976d2;
+  }
+  p{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.8vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  p.show-code{
+    color: #ab2300;
+  }
+  .item-carousel{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    display: -ms-flexbox!important;
+    display: -webkit-flex!important;
+    display: flex!important;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30vw!important;
+    height: 37vh!important;
+    top:0vh;
+  }
+  .item-carousel:hover{
+    cursor: pointer;
+  }
+  
+  .techimg{
+    position: absolute;
+    top:2px;
+    height: 50%;
+    width: 60%;
+    border-radius: 55%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+  .techdesc{
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    height: 50%;
+    width: 100%;
+  }
+  .item-carousel div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .parameter-option{
+    margin-right: 2vh;
+  }
+  .parameters-content{
+    font-size: 1.8vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .parameters-content button,
+  .parameters-content select,
+  .parameters-content input{
+    font-size: 1.5vh;
+  }
+  
+  :host carousel-component.style-carousel.ready .item-carousel{
+    -webkit-transition: all 500ms !important;
+    -moz-transition:all 500ms!important;
+    -o-transition: all 500ms!important;
+    transition: all 500ms!important;
+  }
+  :host carousel-component.style-carousel.ready .item-carousel.actual{
+    height: 30vh!important;
+    top:-2.5vh;
+  }
+  
+  :host carousel-component.cube-mode.ready >>> .container{
+    perspective: 10vh!important;
+  }
+  
+  /* Small devices (tablets, 768px and up) */
+
+/* animacion */
+@keyframes shadow-l {
+    from {background-image: linear-gradient(to right, #00000000, #00000000);}
+    to {background-image: linear-gradient(to right, #000000a9, #00000000);}
+}
+@keyframes n-shadow-l {
+    from {background-image: linear-gradient(to right, #000000a9, #00000000);}
+    to {background-image: linear-gradient(to right, #00000000, #00000000);}
+}
+@keyframes shadow-r {
+    from {background-image: linear-gradient(to left, #00000000, #00000000);}
+    to {background-image: linear-gradient(to left, #000000a9, #00000000);}
+}
+@keyframes n-shadow-r {
+    from {background-image: linear-gradient(to left, #000000a9, #00000000);}
+    to {background-image: linear-gradient(to left, #00000000, #00000000);}
+}
+
+@keyframes drmove {
+    from { background-color: transparent; }
+    to { background-color: red; }
+}
+@keyframes izmove {
+    from { background-color: transparent; }
+    to { background-color: red; }
+}

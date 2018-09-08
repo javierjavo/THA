@@ -1,0 +1,14 @@
+<mat-icon *ngIf="loginStatus > 0" (click)="loginStatus = loginStatus-1">chevron_left</mat-icon>
+<mat-icon *ngIf="loginStatus < 2 && loginStatus > 0" (click)="loginStatus = loginStatus+1">chevron_right</mat-icon>
+
+<div *ngIf="loginStatus == 0">
+    <input type="button" value="Login" (click)="loginStatus = 1">
+    <input type="button" value="Sign in" (click)="registry()"><br>
+  <a href="#">recovery password</a>
+</div>
+<mat-form-field *ngIf="loginStatus == 1">
+  <input matInput placeholder="User">
+</mat-form-field>
+<mat-form-field *ngIf="loginStatus == 2">
+  <input matInput placeholder="Password">
+</mat-form-field>

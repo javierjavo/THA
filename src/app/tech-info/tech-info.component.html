@@ -1,0 +1,15 @@
+<div class="btn-move material-icons" id="align-left" (click)="topCarousel.slidePrev()"> keyboard_arrow_left </div>
+<div class="btn-move material-icons" id="align-right" (click)="topCarousel.slideNext()"> keyboard_arrow_right </div>
+
+<carousel-component [mode]="'horizontal'" [morePairSlides]="moreSlides" [angle]="degree" [initialSlide]="initItem" #topCarousel>
+  <div class="item-carousel" *ngFor="let i of items" (click)="tech(i)"> 
+    <div class="techimg">
+      <img src="http://i.imgur.com/XT7VsZe.jpg" alt="" width="110" height="110">
+    </div>
+    <div class="techdesc">
+      <h2>{{ i.title+" "+i.name }}</h2>
+      <h3>{{ i.position }} </h3>
+      <p>{{ i.expertise }}</p>
+    </div>
+  </div>
+</carousel-component>
